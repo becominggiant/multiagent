@@ -1,0 +1,78 @@
+# Clipfarming Configuration
+# This file controls various parameters for the automated clipfarming system
+
+# Odysee Channel Configuration
+odysee:
+  channel_url: "https://odysee.com/@channelname"
+  max_videos: 10  # Maximum number of videos to process per run
+  video_age_limit_days: 30  # Only process videos newer than this
+
+# Video Processing Configuration
+video:
+  clip_length_seconds: 30  # Target length for clips
+  clips_per_video: 3  # Number of clips to generate per video
+  min_engagement_threshold: 0.1  # Minimum engagement score for segment selection
+  output_format: "mp4"
+  output_resolution: "1080p"
+
+# AI Models Configuration
+ai:
+  openai_model: "gpt-4"
+  whisper_model: "base"  # base, small, medium, large
+  vision_model: "gpt-4-vision-preview"
+  
+  # Content generation prompts
+  title_prompt: "Generate an engaging title for this video clip about: {topic}"
+  description_prompt: "Write a compelling description for this {duration}s video clip"
+
+# Video Editing Configuration
+editing:
+  add_subtitles: true
+  remove_dead_air: true
+  dead_air_threshold: 2.0  # seconds of silence to consider "dead air"
+  add_transitions: true
+  add_branding: true
+  branding_logo_path: "assets/logo.png"
+  branding_position: "bottom-right"  # top-left, top-right, bottom-left, bottom-right
+
+# Social Media Platform Configuration
+platforms:
+  tiktok:
+    enabled: true
+    post_schedule: "prime_time"  # immediate, prime_time, custom
+    hashtags: ["#viral", "#trending", "#fyp"]
+    
+  instagram:
+    enabled: true
+    post_schedule: "prime_time"
+    hashtags: ["#reels", "#viral", "#trending"]
+    
+  youtube_shorts:
+    enabled: true
+    post_schedule: "prime_time"
+    hashtags: ["#shorts", "#viral", "#trending"]
+    
+  twitter:
+    enabled: false
+    post_schedule: "immediate"
+    hashtags: ["#video", "#content"]
+
+# Performance Configuration
+performance:
+  max_concurrent_downloads: 3
+  max_concurrent_clips: 2
+  max_concurrent_uploads: 1
+  enable_gpu_acceleration: true
+
+# Storage Configuration
+storage:
+  temp_dir: "./temp"
+  output_dir: "./output"
+  cache_dir: "./cache"
+  clean_temp_after_processing: true
+
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file_path: "./logs/clipfarming.log"
+  console_output: true
