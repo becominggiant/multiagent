@@ -1,0 +1,41 @@
+# Core AI and automation frameworks
+autogen-agentchat>=0.4.0
+autogen-ext[magentic-one,openai]>=0.4.0
+openai>=1.52.0
+
+# Video processing and manipulation
+yt-dlp>=2024.4.9
+moviepy>=1.0.3
+opencv-python>=4.8.0
+pillow>=10.0.0
+
+# Audio processing and transcription
+openai-whisper>=20231117
+librosa>=0.10.0
+soundfile>=0.12.0
+
+# Web scraping and HTTP requests
+requests>=2.31.0
+aiohttp>=3.9.0
+beautifulsoup4>=4.12.0
+selenium>=4.15.0
+
+# Social media APIs and automation
+tweepy>=4.14.0
+instagrapi>=2.0.0
+
+# Configuration and data handling
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
+pydantic>=2.5.0
+
+# Async and concurrency
+asyncio-mqtt>=0.16.0
+
+# Logging and utilities
+loguru>=0.7.0
+tqdm>=4.66.0
+
+# Optional computer vision
+torch>=2.1.0
+torchvision>=0.16.0
